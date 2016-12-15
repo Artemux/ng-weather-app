@@ -1,0 +1,66 @@
+  <div class="img-wrap">
+    <img src="assets/images/1.jpg" alt="">
+  </div>
+  <div class="inner-wrap">
+    <nav>
+      <ul>
+        <li *ngFor="let link of menu"><a href="{{link.href}}">{{link.name}}</a></li>
+      </ul>
+    </nav>
+    <div class="village">
+      <h3>Righteous indignation & like</h3>
+      <span class="line"></span>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <div class="activity-row">
+            <div class="activity-desc">
+              <h5>{{contacts[0]}}</h5>
+              <p>{{contacts[1]}}</p>
+              <p>{{contacts[2]}}</p>
+              <h6>Tel:+{{contacts[3]}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li *ngFor="let photo of photos">
+                  <img src="{{photo}}">
+                </li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="activity-row">
+            <div class="activity-desc">
+              <h5>{{contacts[0]}}</h5>
+              <p>{{contacts[1]}}</p>
+              <p>{{contacts[2]}}</p>
+              <h6>Tel:+{{contacts[3]}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li *ngFor="let photo of photos">
+                  <img src="{{photo}}">
+                </li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="activity-row">
+            <div class="activity-desc">
+              <h5>{{contacts[0]}}</h5>
+              <p>{{contacts[1]}}</p>
+              <p>{{contacts[2]}}</p>
+              <h6>Tel:+{{contacts[3]}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li *ngFor="let photo of photos">
+                  <img src="{{photo}}">
+                </li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

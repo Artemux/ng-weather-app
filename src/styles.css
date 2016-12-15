@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto');
+
+html, body, ul, nav,
+div, span, article, p, img,
+applet, object, blockquote, pre, a, abbr,
+audio, video, tr, th, td,
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding : 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #313144;
+}
+
