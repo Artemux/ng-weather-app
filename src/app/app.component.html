@@ -2,11 +2,15 @@
     <app-header></app-header>
     <div class="wrap">
         <div class="element-left">
-            <app-info-desk></app-info-desk>
+            <app-info-desk (initWeatherDetails)="initWInfo($event)"
+                           (initSocialInfo)="initStat($event)"
+                           (choseCurrentLoc)="weatherData=$event"
+                           (choseCurrentStat)="statData=$event">
+            </app-info-desk>
         </div>
         <div class="element-right">
-            <app-temprature></app-temprature>
-            <app-teddy-bear></app-teddy-bear>
+            <app-temprature [Data]="weatherData"></app-temprature>
+            <app-teddy-bear [Data]="statData"></app-teddy-bear>
         </div>
         <div class="clear"></div>
     </div>

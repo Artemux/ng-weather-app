@@ -1,5 +1,5 @@
   <div class="img-wrap">
-    <img src="assets/images/1.jpg" alt="">
+    <img src="assets/images/Miami.jpg" alt="" #myImage>
   </div>
   <div class="inner-wrap">
     <nav>
@@ -12,49 +12,17 @@
       <span class="line"></span>
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
-          <div class="activity-row">
+          <div class="activity-row" *ngFor="let data of InfoData; let i = index" (click)="chose(InfoData[i], myImage)">
             <div class="activity-desc">
-              <h5>{{contacts[0]}}</h5>
-              <p>{{contacts[1]}}</p>
-              <p>{{contacts[2]}}</p>
-              <h6>Tel:+{{contacts[3]}}</h6>
+              <h5>{{data.header}}</h5>
+              <p><a href="#">{{data.address1}}</a></p>
+              <p><a href="#">{{data.address2}}</a></p>
+              <h6>Tel:+{{data.tel}}</h6>
             </div>
             <div class="activity-img">
               <ul>
-                <li *ngFor="let photo of photos">
-                  <img src="{{photo}}">
-                </li>
-              </ul>
-            </div>
-            <div class="clear"></div>
-          </div>
-          <div class="activity-row">
-            <div class="activity-desc">
-              <h5>{{contacts[0]}}</h5>
-              <p>{{contacts[1]}}</p>
-              <p>{{contacts[2]}}</p>
-              <h6>Tel:+{{contacts[3]}}</h6>
-            </div>
-            <div class="activity-img">
-              <ul>
-                <li *ngFor="let photo of photos">
-                  <img src="{{photo}}">
-                </li>
-              </ul>
-            </div>
-            <div class="clear"></div>
-          </div>
-          <div class="activity-row">
-            <div class="activity-desc">
-              <h5>{{contacts[0]}}</h5>
-              <p>{{contacts[1]}}</p>
-              <p>{{contacts[2]}}</p>
-              <h6>Tel:+{{contacts[3]}}</h6>
-            </div>
-            <div class="activity-img">
-              <ul>
-                <li *ngFor="let photo of photos">
-                  <img src="{{photo}}">
+                <li *ngFor="let photo of data.photos; let i = index">
+                  <img src="{{photo}}" *ngIf="i < 2">
                 </li>
               </ul>
             </div>

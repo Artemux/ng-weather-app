@@ -1,17 +1,17 @@
 <div class="teddy-bear">
   <div class="teddy-text">
-    <h4>{{head}}</h4>
+    <h4>{{Data.address1}}</h4>
     <span class="w-line"></span>
-    <img src="{{photo}}" alt class="img-responsive">
+    <img src="{{Data.photos[0]}}" alt class="img-responsive">
   </div>
   <div class="teddy-follow">
     <ul>
       <li class="folw-h">
-        <h3>{{stats.followers}}</h3>
+        <h3>{{Data.stats.followers}}</h3>
         <p>Followers</p>
       </li>
       <li>
-        <h3>{{stats.following}}</h3>
+        <h3>{{Data.stats.following}}</h3>
         <p>Following</p>
       </li>
     </ul>

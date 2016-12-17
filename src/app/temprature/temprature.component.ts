@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-temprature',
@@ -7,15 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TempratureComponent implements OnInit {
 
-  public head:string;
-  public data: {air:string, water:string};
+  @Input()
+  public Data: {};
 
   constructor() {
-    this.head = 'Et harum quidem';
-    this.data = {
-      air: '14',
-      water: '20'
-    };
+
   }
 
   public setClasses() {
