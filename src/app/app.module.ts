@@ -9,6 +9,7 @@ import { InfoDeskComponent } from './info-desk/info-desk.component';
 import { TempratureComponent } from './temprature/temprature.component';
 import { TeddyBearComponent } from './teddy-bear/teddy-bear.component';
 import { FooterComponent } from './footer/footer.component';
+import { CountryFilterPipe } from './country-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     InfoDeskComponent,
     TempratureComponent,
     TeddyBearComponent,
-    FooterComponent
+    FooterComponent,
+    CountryFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@
   <div class="inner-wrap">
     <nav>
       <ul>
-        <li *ngFor="let link of menu"><a href="{{link.href}}">{{link.name}}</a></li>
+        <li *ngFor="let link of menu"><a href="{{link.href}}" (click)="selectCountry($event)">{{link.name}}</a></li>
       </ul>
     </nav>
     <div class="village">
@@ -12,7 +12,7 @@
       <span class="line"></span>
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
-          <div class="activity-row" *ngFor="let data of InfoData; let i = index" (click)="chose(InfoData[i], myImage)">
+          <div class="activity-row" *ngFor="let data of (InfoData | countryFilter:country); let i = index;" (click)="chose(data, myImage)">
             <div class="activity-desc">
               <h5>{{data.header}}</h5>
               <p><a href="#">{{data.address1}}</a></p>
@@ -21,8 +21,8 @@
             </div>
             <div class="activity-img">
               <ul>
-                <li *ngFor="let photo of data.photos; let i = index">
-                  <img src="{{photo}}" *ngIf="i < 2">
+                <li *ngFor="let photo of data.photos">
+                  <img src="{{photo}}">
                 </li>
               </ul>
             </div>
