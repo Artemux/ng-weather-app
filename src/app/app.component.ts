@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { InfoserviceService } from './infoservice.service';
 
 @Component({
   selector: 'app-root',
@@ -8,22 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-    public weatherData: {};
-    public statData: {};
+    public infoData: {};
 
-    public constructor() {
+    public constructor(private infoService: InfoserviceService) {
 
-    }
-
-    public initWInfo(data:{}) {
-      this.weatherData = data;
-    }
-
-    public initStat(data:{}) {
-      this.statData = data;
     }
 
     ngOnInit() {
-
+        this.infoService.pushData.subscribe(
+            data => {
+                this.infoData = data;
+            }
+        )
     }
 }

@@ -10,6 +10,7 @@ import { TempratureComponent } from './temprature/temprature.component';
 import { TeddyBearComponent } from './teddy-bear/teddy-bear.component';
 import { FooterComponent } from './footer/footer.component';
 import { CountryFilterPipe } from './country-filter.pipe';
+import { InfoserviceService } from './infoservice.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { CountryFilterPipe } from './country-filter.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [InfoserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
